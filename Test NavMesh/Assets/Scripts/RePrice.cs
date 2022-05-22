@@ -6,25 +6,21 @@ using UnityEngine.AI;
 public class RePrice : MonoBehaviour
 {
     public List<NavMeshModifierVolume> ScriptName;
-    /*public NavMeshModifierVolume ScriptName1;
-    //public NavMeshModifierVolume ScriptName2;
-    public NavMeshModifierVolume ScriptName3;
-    public NavMeshModifierVolume ScriptName4;
-    public NavMeshModifierVolume ScriptName5;
-    public NavMeshModifierVolume ScriptName6;
-    public NavMeshModifierVolume ScriptName7;
-    public NavMeshModifierVolume ScriptName8; */
+   
     public int m_area1;
     public int m_area2;
     public GameObject Obj;
-
+    private Collider Trigg;
+ 
     void Start()
     {
+       Trigg = GetComponent<Collider>();
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
+            Debug.Log("Вход");
             for(int i = 0; i < ScriptName.Count; i++)
             {
                 if(i % 2 == 0)
@@ -35,6 +31,7 @@ public class RePrice : MonoBehaviour
                 {
                     ScriptName[i].area = m_area2;
                 }
+                Trigg.enabled = false;
             }
             
             /*if (ScriptName1 && ScriptName2)
@@ -48,9 +45,15 @@ public class RePrice : MonoBehaviour
             }
             */
             Obj.GetComponent<NavMeshSurface>().BuildNavMesh();
+            Invoke("Timer", 5);
+
         }
     }
-
+    void Timer()
+    {
+        Trigg.enabled = true;
+        Debug.Log("Коллайдер Появился");
+    }
     // Update is called once per frame
-    
+
 }
