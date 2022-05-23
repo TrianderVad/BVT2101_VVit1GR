@@ -13368,6 +13368,10 @@ PrefabInstance:
       propertyPath: trackerPrefab
       value: 
       objectReference: {fileID: 7969186193257521975, guid: 6bb217b6c7964453792e1f349f80e463, type: 3}
+    - target: {fileID: 7524536857892321234, guid: 8be0c79646984472bb31480abd4b9943, type: 3}
+      propertyPath: steeringSensitivity
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 7524536857892321235, guid: 8be0c79646984472bb31480abd4b9943, type: 3}
       propertyPath: m_Name
       value: Car
@@ -21393,7 +21397,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 1
+  m_VoxelSize: 1.1
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: cfbe57bf174d5e44ba02f4c515a34920, type: 2}
 --- !u!114 &1632051759
