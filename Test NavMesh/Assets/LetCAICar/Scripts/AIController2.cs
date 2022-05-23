@@ -10,7 +10,7 @@ public class AIController2 : MonoBehaviour
     public float accelerationSensitivity = 0.3f;
 
     public GameObject trackerPrefab;
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     int currentTrackerWP;
     float lookAhead = 10;
@@ -66,7 +66,7 @@ public class AIController2 : MonoBehaviour
             lastTimeMoving = Time.time;
         }
 
-        if(Time.time > lastTimeMoving + 40)
+        if(Time.time > lastTimeMoving + 4)
         {
             cart.transform.position = circuit.waypoints[currentTrackerWP].transform.position + Vector3.up * 2;
             agent.transform.position = cart.transform.position;

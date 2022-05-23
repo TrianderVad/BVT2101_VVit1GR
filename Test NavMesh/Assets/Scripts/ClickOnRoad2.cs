@@ -16,11 +16,14 @@ public class ClickOnRoad2 : MonoBehaviour
     private GameObject FP;
     private Vector3 PosPoint;
 
+    private AIController2 AIController2;
+
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
         cart.maxSpeed = 0;
+        AIController2.agent.speed = 0;
         FP = Instantiate(waypoint, new Vector3(Mashina.transform.position.x + 10f, Mashina.transform.position.y, Mashina.transform.position.z), Quaternion.identity);
         circuit.waypoints.Add(FP.transform);
 
@@ -41,7 +44,8 @@ public class ClickOnRoad2 : MonoBehaviour
                 if (cart.maxSpeed == 0)
                 {
                     Destroy(FP);
-                    cart.maxSpeed = 30;
+                    cart.maxSpeed = 15;
+                    AIController2.agent.speed = 7.5f;
                 }
                 circuit.waypoints.Clear();
                 PosPoint = new Vector3(hit.point.x, hit.point.y, hit.point.z);
