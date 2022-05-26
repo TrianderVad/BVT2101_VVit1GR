@@ -23,10 +23,12 @@ public class ClickOnRoad2 : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
+        /*
         cart.maxSpeed = 0;
         AIController2.agent.speed = 0;
         FP = Instantiate(waypoint, new Vector3(Mashina.transform.position.x + 10f, Mashina.transform.position.y, Mashina.transform.position.z), Quaternion.identity);
         circuit.waypoints.Add(FP.transform);
+        */
 
     }
 
