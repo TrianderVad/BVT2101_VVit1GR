@@ -66,7 +66,7 @@ public class AIController2 : MonoBehaviour
             lastTimeMoving = Time.time;
         }
 
-        if(Time.time > lastTimeMoving + 40)
+        if(Time.time > lastTimeMoving + 120)
         {
             cart.transform.position = circuit.waypoints[currentTrackerWP].transform.position + Vector3.up * 2;
             agent.transform.position = cart.transform.position;
