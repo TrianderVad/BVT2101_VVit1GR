@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestGorod.unity
     guid: 12245bed167ee3e44a8fb71b3b218e98
+  - enabled: 1
+    path: Assets/Scenes/NewGorod.unity
+    guid: e0f58245fbf2019459d666ca6532d462
   m_configObjects: {}

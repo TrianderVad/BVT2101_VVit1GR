@@ -22,12 +22,14 @@ public class SwitchCamera : MonoBehaviour
             Cam1.SetActive(true);
             Cam2.SetActive(false);
             kostil = 1;
+            Cursor.visible = true;
         }
         if (Input.GetKeyDown(Key2))
         {
             Cam1.SetActive(false);
             Cam2.SetActive(true);
             kostil = 2;
+            Cursor.visible = false;
         }
     }
 }
