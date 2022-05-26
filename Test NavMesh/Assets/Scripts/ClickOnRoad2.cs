@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class ClickOnRoad2 : MonoBehaviour
 {
+    public SwitchCamera switchCamera;
     public Circuit circuit;
     public Cart cart;
     public Camera mainCamera;
@@ -32,8 +33,9 @@ public class ClickOnRoad2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && switchCamera.kostil == 1)
         {
+            Debug.Log("Всё ок");
             RaycastHit hit;
             if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out hit))
             {
